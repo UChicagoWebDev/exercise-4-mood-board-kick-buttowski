@@ -30,7 +30,9 @@ h1 {
   text-shadow: 0 0 4px black, 6px 0 3px #73141B, 9px 3px 6px #BFA006;
 }
 
-
+#suggestions li {
+  cursor: pointer;
+}
 
 .top_bar .search {
   flex-basis: 360px;
@@ -49,6 +51,10 @@ h1 {
   color: white;
   background-color: #BFA006;
   border: 0px;
+}
+
+.suggestions {
+  margin-bottom: 10px;
 }
 
 .suggestions h3 {
@@ -138,14 +144,39 @@ h1 {
 
 #board {
   margin-top: 20px;
-  column-width: 250px;
-  column-count: auto;
-  column-gap: 20px;
+  column-count: 4;
+  column-gap: 10px;
 }
 
 #board img {
-  width: 250px;
-  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 7px;
 }
 
+#board .savedImage {
+  text-decoration: none;
+	background-color: #e0e0e0;
+	width: 100%;
+	margin-bottom: 1rem;
+	align-items: center;
+	border-radius: 7px;
+  break-inside: avoid-column;
+  /* box-shadow: 0px 0px 5px #b0b0b0; */
+}
 
+#board p {
+  padding-bottom: 12px;
+	font-size: 12px;
+	text-align: center;
+}
+
+#resultsImageContainer .resultImage {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+	#board {
+		column-count: 2;
+	}
+}
